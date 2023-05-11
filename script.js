@@ -28,8 +28,10 @@ function vegetarian(){
     btnOne.innerHTML = "Salad";
     btnTwo.innerHTML = "Main dish";
 
-    btnOne.addEventListener("click", salad);
+    btnOne.removeEventListener("click", vegetarian); 
+    btnTwo.removeEventListener("click", meat);
     btnTwo.addEventListener("click", meal);
+    btnOne.addEventListener("click", salad);
 }
 function salad (){
     
@@ -40,6 +42,8 @@ function salad (){
     btnOne.innerHTML = "Bow Tie & Spinach Salad";
     btnTwo.innerHTML = "Summer fruit salad";
 
+    btnOne.removeEventListener("click", salad); 
+    btnTwo.removeEventListener("click", meal);
     btnOne.addEventListener("click", vegetarianSalad);
     btnTwo.addEventListener("click", fruitSalad);
 }
